@@ -8,7 +8,7 @@
 
     <input type="text" id="myText">
 
-    <button onclick="myFunction()">Try it</button>
+    <button onclick="myFunction()">תבדוק</button>
 
     <p id="demo"></p>
 
@@ -21,8 +21,21 @@
             var n = x.length;
             var pi1 = pi.substr(0, n);
             var s = pi1.includes(x);
-            document.write("you:" + x + "\n pi: " + pi1 + "\n and it is:" + s)
+            var s1 = x.indexOf(pi);
+            if (s == false) {
+                s = "טעות"
+                num = 0;
+                while (pi1[num] == x[num]) {
+                    num = num+1;
+                }
+                anser = "אתה צודק ב" + num + "תווים" 
+            }
+            else {
+                anser = "אתה צודק ב" + n + "תווים"
+            } 
+            document.write(anser)
+        }
     </script>
 
 </body>
-</html>
+</html>		
